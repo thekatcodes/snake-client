@@ -11,7 +11,7 @@ const connect = function () {
 
 	//event handler to handle incoming data and console log it for me, the playerå
 	conn.on("data", (data) => {
-		console.log("blablabla", data);
+		console.log("Server message:", data);
 	});
 
 	conn.on("connect", () => {
