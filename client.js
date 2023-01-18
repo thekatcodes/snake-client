@@ -9,18 +9,15 @@ const connect = function () {
 	// interpret incoming data as text
 	conn.setEncoding("utf8");
 
+	//event handler to handle incoming data and console log it for me, the playerå
 	conn.on("data", (data) => {
-		console.log("Kicked you cuz you idled", data);
+		console.log("blablabla", data);
 	});
 
 	conn.on("connect", () => {
 		console.log("Successfully connected to game server");
 		conn.write("Name: KTL");
-    });
-    conn.on("connect", () => {
-		console.log("Move: up");
 	});
-
 
 	return conn;
 };
