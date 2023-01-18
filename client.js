@@ -16,7 +16,11 @@ const connect = function () {
 	conn.on("connect", () => {
 		console.log("Successfully connected to game server");
 		conn.write("Name: JXL");
+    });
+    conn.on("connect", () => {
+		console.log("Move: up");
 	});
+
 
 	return conn;
 };
